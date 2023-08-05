@@ -24,3 +24,24 @@
 10. 監控日誌和監測系統：設置自動化的監控機制，能夠追蹤應用程式的性能和健康狀態。當發生異常時，能及時發出警報。
 
 通過遵循這些實踐方法，你可以將Flask應用程式整合到DevOps流程中，從而提高開發速度，減少問題和故障，並提供更好的用戶體驗。
+
+
+這段程式碼step-by-step的等入DevOps的概念
+```
+DevOps. from flask import *  
+app = Flask(__name__)  
+
+@app.route('/')  
+def upload():  
+    return render_template("file_upload_form.html")  
+
+@app.route('/success', methods = ['POST'])  
+def success():  
+    if request.method == 'POST':  
+        f = request.files['file']  
+        f.save(f.filename)  
+        return render_template("success.html", name = f.filename)  
+
+if __name__ == '__main__':  
+    app.run(host= '0.0.0.0', debug = True)
+```
