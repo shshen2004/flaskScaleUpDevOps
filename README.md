@@ -27,7 +27,7 @@
 
 
 這段程式碼的功能是簡單的上傳檔案，接下來要重構這段程式碼導入DevOps的概念
-```
+```python
 #上傳檔案，但沒有考慮安全性與測試、佈署的簡單版，V0.001
 DevOps. from flask import *  
 app = Flask(__name__)  
@@ -48,7 +48,7 @@ if __name__ == '__main__':
 ```
 
 file_upload_form.html的範例程式碼：
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
